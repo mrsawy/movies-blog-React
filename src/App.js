@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 import PeoplePage from "./components/pages/PeoplePage";
 import classes from "./App.css";
 import tvShowRoute from "./routers/tvShowsRouter";
-// react-custom-scrollbars
+// react-cusstom-scrollbars 
 // import Scrollbars from "react-custom-scrollbars";
 
 //,Link
