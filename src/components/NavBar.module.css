@@ -1,0 +1,49 @@
+.big_container,
+.first_container,
+.second_container {
+  display: flex;
+  flex-direction: row;
+  gap: 34px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.big_container {
+  background-color: #032541;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+
+
+
+}
+@media only screen and (max-width: 840px) {
+
+.big_container{
+  font-size: 80%;
+}
+}
+
+.logo{
+  min-width:200px ;
+  min-height: 50px;
+  background-image: url("../images/Screenshot_15.png");
+  background-repeat: no-repeat;
+
+}
+.link{
+  color: aliceblue;
+  transition: all 0.2 ease-in;
+}
+
+.active{
+  color: rgb(155, 50, 120);
+
+}
+.link:hover{
+  color: rgb(155, 50, 120);
+}
