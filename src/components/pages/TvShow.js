@@ -31,7 +31,7 @@ const Movie = () => {
   }, [id]);
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} >
       <Details
         // parseFloat(num).toFixed(2);
 
