@@ -9,7 +9,10 @@
 }
 
 .big_container {
-  background-color: #032541;
+  /* background-color: rgb(18, 32, 44,0.66); */
+
+    background-image: linear-gradient(to bottom ,#1D1D1D,rgba(29, 29, 29, 0.5),#1D1D1D);
+
   color: white;
   justify-content: space-around;
   align-items: center;
@@ -17,6 +20,21 @@
   display: flex;
   flex-wrap: wrap;
   padding: 1rem 0;
+  box-shadow: 0px 0px 30px 1px rgba(174, 32, 132, 0.75);
+
+  /* opacity: 0.79; */
+
+  /* filter: blur(10px); */
+  /* filter: blur(1px); */
+}
+
+.big_container *{
+  /* opacity: 1;
+  filter: contrast(2px);
+  filter:saturate(2px);
+   */
+  /* filter: blur(-10px); */
+  transition: all 0.2s;
 
 
 
@@ -29,10 +47,17 @@
 }
 
 .logo{
-  min-width:200px ;
-  min-height: 50px;
-  background-image: url("../images/Screenshot_15.png");
+  min-width:150px ;
+  min-height: 100px;
+  background-image: url("../images/film-reel-36155.png");
   background-repeat: no-repeat;
+
+  background-size: contain;
+}
+.logo img{
+  min-width:20px ;
+  min-height: 50px;
+
 
 }
 .link{

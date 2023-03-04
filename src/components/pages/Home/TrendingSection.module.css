@@ -1,0 +1,46 @@
+
+.trending{
+    padding:0% 0%;
+    color: aliceblue;
+    box-shadow: 0px -2px 10px 5.5px var(--pink);
+    position: relative;
+
+  }
+  .headermovies ,.genresTrending{
+    display: flex;
+    flex-direction: row;
+    /* gap:97px; */
+    padding: 0 10%;
+  }
+  .headermovies *{
+    /* background-color: rgb(0, 0, 0,0.2) */
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+  .headermovies{
+    gap:25%
+  }
+
+  .headermovies p:hover{
+    color: var(--pink);
+  }
+  
+  .genresTrending p{
+    /* width: 900px; */
+    transition: all 0.3s;
+  }
+
+  p.choosen{
+    box-shadow: -1px 0px 4px 3px var(--pink);
+    height: 2rem;
+    border-radius: 29px;
+    background-color: var(--pink);
+    color: aliceblue;
+    padding: 0 2%;
+  
+  }
+
+  p.choosen:hover{
+    color: rgb(255, 255, 255);
+
+  }

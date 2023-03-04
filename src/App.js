@@ -1,10 +1,10 @@
 import "./App.css";
-import { Route, Routes,  Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import PeoplePage from "./components/pages/PeoplePage";
 import classes from "./App.css";
 import tvShowRoute from "./routers/tvShowsRouter";
-// react-cusstom-scrollbars 
+// react-custom-scrollbars
 // import Scrollbars from "react-custom-scrollbars";
 
 //,Link
@@ -17,8 +17,10 @@ import Footer from "./components/Footer";
 import Movie from "./components/pages/Movie";
 import NotFound from "./components/pages/NotFound";
 import TvShow from "./components/pages/TvShow";
+import Auth from "./components/pages/Auth/Auth";
+import Home from "./components/pages/Home/Home";
 
-// import BookShelf from "./components/book-shelf" ;
+// import BookShelf from "./components/book-shelf";
 // import { getAll } from "./BooksAPI";
 
 const App = () => {
@@ -26,16 +28,13 @@ const App = () => {
 
   return (
     <div className={classes.biggest}>
+      
       {/* <Scrollbars /> */}
+
       <NavBar />
-
       <Routes>
-
-
-        <Route path="/" element={<Navigate to="/movies" />} />
-          
-
-        <Route path="/movies">
+        <Route path="/" element={<Home />} />
+        <Route path="/movies"  >
           <Route index element={<MoviesPage />} />
           <Route path=":id" element={<Movie kind={`movie`} />} />
         </Route>
@@ -48,6 +47,11 @@ const App = () => {
         <Route path="/tv-shows">
           <Route index element={<TvShowsPage />} />
           <Route path=":id" element={<TvShow kind={`tv`} />} />
+        </Route>
+
+        {/*auth route */}
+        <Route path="/auth">
+          <Route index element={<Auth />} />
         </Route>
         {/* <Route path="/tv-shows" element={<TvShowsPage />} /> */}
         <Route path="*" element={<NotFound />} />

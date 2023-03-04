@@ -3,6 +3,8 @@ import Card from "../CardPopular";
 import classes from "./MoviePage.module.css";
 import SearchBar from "../SearchBar";
 import { Link  , Outlet  , Route} from "react-router-dom";
+import NavBar from "../NavBar";
+import MoviesContent from "./MoviesContent";
 
 const MoviesPage = () => {
   const [moviesArray, setMoviesArray] = useState([]);
@@ -44,9 +46,13 @@ const MoviesPage = () => {
     <>
 
     {/* <Route path="/movies" element={<h1>aaaahhhhhhhdjmdd</h1>} /> */}
+    {/* <Outlet /> */}
     <Outlet />
+
       <div className={classes.container}>
-        <div className={classes.poster}></div>
+        <div className={classes.poster}>
+
+        </div>
         <SearchBar />
         <div className={classes.filter}>
           <p className="choosen" onClick={clicked}>
@@ -56,27 +62,7 @@ const MoviesPage = () => {
           <p onClick={clicked}>latest</p>
           <p onClick={clicked}>Upcomming</p>{" "}
         </div>
-        <div className={classes.content}>
-          {moviesArray.map((e) => {
-            return (
-              <Link className={classes.card_link} to={`/movies/${e.id}`}
-                  key={e.id}
-              >
-                <Card
-                className={classes.customCardPehavior}
-                  title={
-                    e.title?e.title.split(` `).length < 7
-                      ? e.title
-                      : e.title.split(`:`)[0]:`aha`
-                  }
-                  date={e.release_date ? e.release_date : ``}
-                  rate={e.vote_average}
-                  img={`https://www.themoviedb.org/t/p/w220_and_h330_face${e.poster_path}`}
-                />
-              </Link>
-            );
-          })}
-        </div>
+       <MoviesContent moviesArray={moviesArray} />
       </div>
 
     </>

@@ -27,8 +27,14 @@ const ReviewCard = (props) => {
       <section className={classes.content}>
         <p>{props.appear}</p>{" "}
         {full && <span className={classes.more}>{props.maybe}</span>}
-        
-         {props.maybe && <ReadMoreButton onClick={()=>{full?setFull(false):setFull(true)}} label={full?`Read less` :`Read more`}  />}
+        {props.maybe && (
+          <ReadMoreButton
+            onClick={() => {
+              full ? setFull(false) : setFull(true);
+            }}
+            label={full ? `Read less` : `Read more`}
+          />
+        )}
       </section>
       <hr className={classes.review_hr} />
     </>

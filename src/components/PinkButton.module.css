@@ -12,6 +12,7 @@
   border: none;
   /* width: 9%; */
   transition: all 0.16s ease-in;
+  cursor: pointer  ;
 }
 .form-button:hover{
     background-color: var(--darkPink);

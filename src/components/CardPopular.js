@@ -4,7 +4,7 @@ import Rate from "./Rate";
 
 const Card = (props) => {
   return (
-    <div className={`${classes.holeDiv} ${props.className}`}>
+    <div className={`${classes.holeDiv} ${props.className}`} >
       <div
         style={{ backgroundImage: `url(${props.img})` }}
         className={classes.container}

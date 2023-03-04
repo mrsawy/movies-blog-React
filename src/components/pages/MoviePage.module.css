@@ -6,25 +6,27 @@
   flex-direction: column;
   gap: 30px;
   margin-bottom:5% ;
+  transform: translateY(-40px);
 
 }
 .card_link{
     color: black;
 }
 .poster {
-  height: 30rem;
-  width: 85%;
+  height: 25rem;
+  width: 80%;
   border-radius: 40px;
   margin: 20px auto 0 auto;
-  background-image: url("https://cdn.shopify.com/s/files/1/0087/2506/9860/collections/1_jfR0trcAPT3udktrFkOebA.jpg?v=1566963161");
-  background-size: cover;
+   background-image: url("https://cdn.shopify.com/s/files/1/0087/2506/9860/collections/1_jfR0trcAPT3udktrFkOebA.jpg?v=1566963161"); 
+ background-size: cover;
   transform: translateY(50px);
   box-shadow: 0px 0px 4px 0px white;
   transition: all 1s ease-in;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .poster:hover {
   box-shadow: 0px 0px 5.5px 4px var(--darkPink);
+  opacity: 1;
 }
 .content {
   /* display: grid;

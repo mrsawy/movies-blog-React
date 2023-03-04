@@ -1,6 +1,8 @@
 import React from "react";
+import logoImage from "./../images/film-reel-36155.png";
+
 // { useEffect }
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink,useLocation } from "react-router-dom";
 
 //import Card from "./Card";
 import classes from "./NavBar.module.css";
@@ -11,12 +13,18 @@ const classesFunction = (obj) => {
 };
 
 const NavBar = () => {
+  const location = useLocation()
+  const currentUrl = location.pathname;
+  console.log(currentUrl);
+
   return (
     <>
+    {currentUrl !== `/Auth` &&
       <div className={classes.big_container}>
         <div className={classes.first_container}>
           <div className={classes.logo}>
-            <img src="../images/Screenshot_15.png" alt="" />
+            {/* <img src={logoImage} alt="" /> */}
+            
           </div>
           <NavLink className={classesFunction} to="/">
             home
@@ -32,10 +40,11 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div className={classes.second_container}>
-          <div>profile</div>
-          <div>search</div>
+        <NavLink className={classesFunction} to="/Auth">
+            Login
+          </NavLink>         
         </div>
-      </div>
+      </div>}
     </>
   );
 };

@@ -34,8 +34,10 @@ html {
 body {
   line-height: 1.5;
   box-sizing: border-box;
-  background-image: url("./images/juniperphoton-5KvjBCpyWBo-unsplash.jpg");
-  Background-attachment:fixed;
+  /* background-image: url("./images/juniperphoton-5KvjBCpyWBo-unsplash.jpg"); */
+  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)),
+  url('./images/juniperphoton-5KvjBCpyWBo-unsplash.jpg');
+Background-attachment:fixed;
   background-size: cover;
  backdrop-filter:unset;
   height: 100vh;
